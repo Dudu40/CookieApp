@@ -1,0 +1,28 @@
+ [ { "id" :0,
+    "nom": "Ducasse",
+    "prenom" : "Quentin",
+    "age" : 22,
+    "classe" : "ING3",
+    "contrat" : true,
+    "options" : ["ICC","Cyber"],
+    "photo" : "p1.jpg"
+  },
+  { "id" :1,
+    "nom": "Mathis",
+    "prenom" : "Gourc",
+    "age" : 22,
+    "classe" : "ING3",
+    "contrat" : false,
+    "options" : ["Cloud","Data"],
+    "photo" : "p2.jpg"
+  },
+  { "id" :2,
+    "nom": "Matthieu",
+    "prenom" : "Leblanc",
+    "age" : 22,
+    "classe" : "ING3",
+    "contrat" : false,
+    "options" : ["Cloud","Data"],
+    "photo" : "p3.jpg"
+  }
+ ]
