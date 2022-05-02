@@ -1,0 +1,29 @@
+mat-dialog-container{
+}
+
+mat-dialog-content{
+    width:250px;
+}
+
+.form-group{
+    margin-top:20px;
+}
+
+.btn{
+    background-color:black;
+    color:white;
+}
+.btn:hover{
+    background-color: #cc6600;
+    color:white;
+    border:none;
+}
+
+.error{
+    color:red;
+    font-size:14px;
+  }
+
+.alert{
+    margin-top:40px;
+}

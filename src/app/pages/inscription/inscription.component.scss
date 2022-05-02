@@ -1,0 +1,28 @@
+.form{
+  color:white;
+  margin-top:40px;
+  margin-right:auto;
+  margin-left:auto;
+  width:400px;
+
+  h2{
+    margin-bottom:20px;
+  }
+
+  .form-control{
+    margin-bottom:10px;
+  }
+  .btn{
+    background-color:inherit;
+    border : solid 1px white;
+  }
+  .btn:hover{
+    background-color: #cc6600;
+    border:none;
+  }
+}
+
+.error{
+  color:#cc6600;
+  font-size:14px;
+}

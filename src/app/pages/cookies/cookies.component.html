@@ -1,0 +1,22 @@
+<div class="add-cookie">
+    <button *ngIf="authService.isAdmin" (click)="openDialog()">Ajouter un cookie</button>
+</div>
+<mat-grid-list cols="3">
+    <mat-grid-tile *ngFor="let cookie of cookiesList" >
+        <mat-card class="cookie">
+                <p class="title">{{cookie.nom}}</p>
+            
+            <mat-card-content>
+                <img mat-card-image src={{cookie.image}} alt="{{cookie.nom}}">
+                 <p>prix : {{cookie.prix}} €</p>
+            </mat-card-content>
+            <mat-card-actions>
+            <button mat-button (click)="openInfo(cookie)"><mat-icon>info</mat-icon></button>
+            <button *ngIf="authService.isConnected" mat-button (click)="changeFavorite(cookie)"><mat-icon [class.favorite-selected] = "currentIdUserInArray(cookie)">favorite</mat-icon></button>
+            <button *ngIf="authService.isAdmin" mat-button><mat-icon>edit</mat-icon></button>
+            <button *ngIf="authService.isAdmin" mat-button (click)="deleteCookie(cookie)"><mat-icon>delete</mat-icon></button>
+            </mat-card-actions>
+        </mat-card>
+    </mat-grid-tile>
+</mat-grid-list>
+

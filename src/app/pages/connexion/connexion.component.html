@@ -1,0 +1,19 @@
+
+<div class="form">
+  <h2>Connectez-vous</h2>
+  <form [formGroup]="connexionForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label>Pseudo</label>
+      <input class="form-control" id="pseudo" type="text" formControlName="pseudo">
+    </div>
+    <div class="form-group">
+      <label>Mot de passe </label>
+      <input class="form-control" id="mdp" type="password" formControlName="mdp">
+    </div>
+    <button type="submit" class="btn btn-primary" >Se connecter</button>
+  </form>
+  <p>Pas encore inscrit ?
+    <a [routerLink]="['/inscription']" >S'inscrire</a>
+  </p>
+</div>
+<div class="alert alert-danger" *ngIf="!succes">Le mot de passe ou l'identifiant est incorrect</div>

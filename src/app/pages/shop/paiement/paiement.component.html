@@ -1,0 +1,18 @@
+<div class="paiement">
+   <h2> Montant à Payer : {{total}} €</h2>
+   <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label>Numéro de carte</label>
+      <input class="form-control" id="numero" type="number" formControlName="numero" required minlength="16" maxlength="16">
+    </div>
+    <div class="form-group">
+      <label>Date d'expiration </label>
+      <input class="form-control" id="date" type="date" formControlName="date" required>
+    </div>
+    <div class="form-group">
+        <label>Cryptogramme visuel </label>
+        <input class="form-control" id="crypto" type="number" formControlName="crypto" required>
+      </div>
+    <button type="submit" [disabled]="!isValid()" (click)="onSubmit()" class="btn btn-primary">Confirmer</button>
+  </form>
+</div>

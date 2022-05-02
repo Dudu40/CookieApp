@@ -1,0 +1,28 @@
+<h1 mat-dialog-title>Creez votre cookie<h1>
+<div mat-dialog-content class="mat-typography">
+    <form [formGroup]="form">
+        <div class="form-group">
+          <label>Nom du cookie</label>
+          <input class="form-control" type="text" formControlName="nom" placeholder="Entrez un nom" required>
+        </div>
+        <div class="form-group">
+            <label>Prix</label>
+            <input class="form-control" type="number" formControlName="prix" placeholder="Entrez le prix" required>
+        </div>
+        <div class="form-group">
+            <label>Url de l'image</label>
+            <input class="form-control" type="text" formControlName="image" placeholder="Entrez l'url de l'image" required>
+            <span class="error" *ngIf="!isUrlValid">L'url de l'image est introuvable</span>
+        </div>
+        <div class="form-group">
+            <label>Description</label>
+            <input class="form-control" type="text" formControlName="desc" placeholder="Entrez une description" required>
+        </div>
+        <div class="alert alert-danger" *ngIf="!form.valid">Veuillez entrez tous les champs du formualaire</div>
+        <div class="alert alert-success" *ngIf="succes">Le cookie a été ajouté avec succès !</div>
+    </form>
+</div>
+
+<div mat-dialog-actions align="end">
+    <button type="submit" class="btn btn-primary" (click)="onSubmit()" [disabled]="!isValid()">Ajouter le cookie</button>
+</div>

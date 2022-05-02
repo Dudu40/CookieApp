@@ -1,0 +1,22 @@
+
+<mat-grid-list *ngIf="shopList.length>0" cols="3">
+    <button class="btn payer" (click)="confirmerCommande()">Confirmer la commande</button>
+    <mat-grid-tile *ngFor="let cookie of shopList;let i=index" >
+        <mat-card class="cookie">
+            <p class="title">{{cookie.nom}}</p>
+               <mat-card-content>
+                <img mat-card-image src={{cookie.image}} alt="{{cookie.nom}}">
+                 <p>prix : {{cookie.prix}} €</p>
+            </mat-card-content>
+            <mat-card-actions >
+                <button mat-button (click)="removeFromFavorite(cookie.id)"><mat-icon>delete</mat-icon></button>
+            </mat-card-actions>
+        </mat-card>
+    </mat-grid-tile>
+</mat-grid-list>
+<div class="message" *ngIf="shopList.length==0">
+    Aucun article dans les panier
+</div>
+
+
+
